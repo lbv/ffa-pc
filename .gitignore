@@ -1,3 +1,12 @@
-ffa1*
-ffa2*
-zips
+/ffa1*
+/ffa2*
+/zips*
+
+Rakefile
+/*/unified
+/*/*/src
+/*/*/img
+/*/*/htm
+
+/*/*/code/*
+!*.cpp
