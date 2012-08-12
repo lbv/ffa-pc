@@ -23,6 +23,9 @@ int main()
     int T = MAXT;
     printf("%d\n", T);
 
+    puts("2 3"); --T;
+    puts("2 4"); --T;
+    puts("3 7"); --T;
     puts("1 1"); --T;
     puts("2 2"); --T;
     puts("3 3"); --T;

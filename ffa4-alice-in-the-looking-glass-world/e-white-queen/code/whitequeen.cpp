@@ -42,12 +42,9 @@ int solve()
 
     i64 num, den;
 
-    if (n < k) num = den = 1;
-    else {
-        num = fact[n];
-        den = mod_pow(fact[q], k, MOD);
-        den = den * mod_pow(q + 1, r, MOD) % MOD;
-    }
+    num = fact[n];
+    den = mod_pow(fact[q], k, MOD);
+    den = den * mod_pow(q + 1, r, MOD) % MOD;
 
     num = num * fact[k] % MOD;
     den = den * fact[r] % MOD;
