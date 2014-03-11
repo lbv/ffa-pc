@@ -1,0 +1,70 @@
+% Problem A: The Rolling Boulder
+
+_Note: for an unified PDF with the problems and information about the
+contest, please visit [this
+website](https://sites.google.com/a/diptongonante.com/ffa-pc/contests/free-for-all-3-cs-adventures-of-indiana-jones)_
+
+Dr. Indiana Jones, the famous professor of archaeology, has just secured a
+golden idol from an ancient Temple in the depths of a South American forest.
+Alas! Things are not as easy as snatching the idol and walking out of the
+place. Indiana has to escape the temple before a giant boulder blocks the
+only exit, or even worse, crushes him under its weight.
+
+![Indy outrunning the boulder](boulder1.jpg)
+
+Indiana starts running from a certain point that is **I** meters ahead of
+the boulder. He maintains a constant speed of **V** meters per second,
+running towards the exit, which is located **E** meters from the boulder.
+
+The boulder is on a slightly inclined plane, and its initial speed is zero,
+but starts moving with an horizontal acceleration of **A** $m/s^2$.
+
+![Model of the situation](boulder2.jpg)
+
+Will Indiana escape from the temple? And if he does get out in time, how
+close is his escape?
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 2000$).
+
+Each test case is represented by four floating point numbers in a single
+line. These numbers are, in order:
+
+* **I**: The distance in meters between the boulder and Indiana.
+* **E**: The distance in meters between the boulder and the exit.
+* **V**: Indy's constant speed, in meters per second.
+* **A**: The boulder acceleration, in meters per second squared.
+
+$0 < V \leq 100$ ; $0 < A \leq 10$ ; $0 \leq I \leq E \leq 1000$
+
+All numbers will have two digits after the decimal point.
+
+## Output ##
+
+For each test case, print the case number, followed by a message as follows:
+
+If Indy can escape the temple, print **Indy escapes by #.# s**, where the
+number is the time (in seconds) from the moment Indy reaches the exit, until
+the boulder does the same. Print this value as a real number with exactly
+one digit after the decimal point. If Indy and the boulder reach the exit at
+the same time, then it can be assumed that Indy successfully escaped.
+
+If the boulder reaches the exit before Indy can get out, print **Indy can't
+escape**.
+
+## Sample Input ##
+
+~~~~
+2
+60.00 150.00 6.00 1.31
+60.00 150.00 6.00 1.50
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: Indy escapes by 0.1 s
+Case 2: Indy can't escape
+~~~~

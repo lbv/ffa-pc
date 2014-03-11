@@ -1,0 +1,94 @@
+% Problem L: The Grail Trials (II)
+
+The second trial is _The Word of God_. Indy has to cross over a section of
+the cave where the floor is covered with letters. Only the correct letters,
+formed by the Latin spelling of the word "Jehovah", are safe positions. If
+Indy steps on the wrong letter, the floor under him would crumble, and he
+could fall to his death.
+
+![The word of God: only in the footsteps of God will he proceed](trials2.jpg)
+
+Now, we will represent the floor as a grid of characters where all cells are
+filled with either an uppercase letter from the English alphabet, or with a
+vertical line (**|**). The grid will be formed in such a way that, when you
+look at its diagonals, they alternate between letters-only and vertical
+bars-only, but you can't make assumptions about which kind of diagonal comes
+first.
+
+Indy starts from the bottom of the grid, and has to move all the way to the
+top, and from any given position, his jumping ability allows him to reach
+one of three alternatives: a cell one row above and one column to the right,
+or a cell one row above and one column to the left, or a cell two rows above
+and in the same column.
+
+For example, in the following grid:
+
+~~~~
+|X|X|
+X|D|X
+|B|C|
+X|A|X
+~~~~
+
+Indy can jump from position **A**, to positions **B**, **C** and **D**, but
+not to any of the cells filled with **X**. Because of the way the trap is
+rigged, Indy always has to start from the bottom row, and always has to
+finish on the top row.
+
+You are given the original word used to create the floor; Indy can't step on
+any letter that is _not_ part of that word. If Indy wants to cross the trap
+always moving forward (without jumping back or to the sides), in how many
+different ways can he do it?
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 500$).
+
+Each case starts with two integers in a single line: **R** and **C**, which
+represent the number of rows and columns of the grid.
+
+$1 \leq R, C \leq 80$
+
+The second line will contain a word formed by uppercase letters only. The
+length of this word will be between $1$ and $50$.
+
+The next $R$ lines will contain $C$ characters, forming a valid grid as
+described above.
+
+## Output ##
+
+For each test case, print the case number, and then print the number of
+different ways in which Indy can cross the trap, moving only forward.
+
+As the result could be a very large number, print the answer modulo
+$1000003$.
+
+## Sample Input ##
+
+~~~~
+2
+7 8
+IEHOVAH
+|H|X|H|W
+G|A|A|B|
+|M|V|Z|D
+U|O|I|B|
+|P|H|F|B
+V|E|T|E|
+|J|I|K|R
+5 5
+AEIOU
+A|E|I
+|O|U|
+E|X|U
+|A|E|
+U|A|I
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 19
+Case 2: 26
+~~~~

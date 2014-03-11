@@ -1,0 +1,128 @@
+% Problem L: Life Is But A Dream
+
+> A boat beneath a sunny sky, \
+> Lingering onward dreamily\
+> In an evening of July—\
+>\
+> Children three that nestle near,\
+> Eager eye and willing ear,\
+> Pleased a simple tale to hear---\
+>\
+> Long has paled that sunny sky:\
+> Echoes fade and memories die.\
+> Autumn frosts have slain July.\
+>\
+> Still she haunts me, phantomwise,\
+> Alice moving under skies\
+> Never seen by waking eyes.\
+>\
+> Children yet, the tale to hear,\
+> Eager eye and willing ear,\
+> Lovingly shall nestle near.\
+>\
+> In a Wonderland they lie,\
+> Dreaming as the days go by,\
+> Dreaming as the summers die:\
+>\
+> Ever drifting down the stream---\
+> Lingering in the golden gleam---\
+> Life, what is it but a dream?
+
+![Alice recalling her dream](dream.jpg)
+
+- - -
+
+And so, we reach the end of the Alice's story. In the closing poem, we can
+see that many words end with a common sequence of letters (that is, they
+have a common *suffix*), mainly for rhyming purposes.
+
+For this problem, your task is to write a program that analyses a block of
+text (like a poem, for example), and can answer to queries of three types.
+Given an arbitrary suffix **S**, we are interested in the following queries:
+
+* What was the first word in the text with the suffix $S$?
+* What was the last word in the text with the suffix $S$?
+* How many words in the whole text have the suffix $S$?
+
+The queries are case--insensitive (a lowercase **x** matches an uppercase
+**X**, for example).
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 10$).
+
+Each test case starts with a blank line. The next line contains an integer
+**M** that represents the amount of lines of text to analyse. The following
+$M$ lines contain arbitrary text that can include whitespaces and any
+printable character. The maximum length for any line of text is 10,000
+characters.
+
+$1 \leq M \leq 10$
+
+All lines of text contain between 1 and 30 words. A word is a sequence of 1
+or more consecutive alphabetic characters (lowercase or uppercase). Any
+non-alphabetic character (including punctuation marks) must be considered as
+whitespace. Every word will have a length between 1 and 250 (inclusive).
+
+After the lines of text comes an integer **Q** in a single line, denoting the
+number of queries to process.
+
+$1 \leq Q \leq 300$
+
+The following $Q$ lines contain a query of the form **Type Suffix** where
+"Type" can be one of three alternatives:
+
+* **F** - Asks for the first word with the given *Suffix*.
+* **L** - Asks for the last word with the given *Suffix*.
+* **N** - Asks for the total number of words with the given *Suffix*.
+
+The *Suffix* will have a length between 1 and 250 (inclusive) and it will be
+completely in lowercase letters.
+
+## Output ##
+
+For each test case, print the case number in one line. Then, for every
+query, print its answer in a single line. If the query type is **F** or
+**L** and it can be answered with a valid word, print the word in lowercase
+letters. If no word with the given *Suffix* was found in the text, print a
+single asterisk symbol (__*__).
+
+## Sample Input ##
+
+~~~~
+2
+
+3
+Children three that nestle near,
+Eager eye and willing ear,
+Pleased a simple tale to hear-
+3
+F ear
+L ear
+N ear
+
+3
+Ever drifting down the stream-
+Lingering in the golden gleam-
+Life, what is it but a dream?
+4
+F in
+L ear
+N ing
+L eam
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1:
+near
+hear
+3
+Case 2:
+in
+*
+2
+dream
+~~~~

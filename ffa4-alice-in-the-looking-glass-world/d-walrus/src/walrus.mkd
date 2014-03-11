@@ -1,0 +1,74 @@
+% Problem D: The Walrus and the Carpenter
+
+Alice didn't have much time to miss the departure of her Fawn friend, when
+she came across Tweedledee and Tweedledum, two round-shaped brothers who
+enjoy telling stories and reciting poetry. They told Alice the astounding
+and poignant story of *The Walrus and the Carpenter*, a couple of astute
+characters who trick a group of oysters into following them on a long walk,
+until they came to rest upon a rock, where the Walrus and the Carpenter
+proceeded to eat the poor oysters.
+
+![Feasting on the Oysters](walrus.jpg)
+
+The brothers finished their story, and Alice paused for a moment to think
+about its protagonists.
+
+"I like the Walrus best," said Alice, "because you see he was a little sorry
+for the poor oysters."
+
+"He ate more than the Carpenter, though," said Tweedledee. "You see he held
+his handkerchief in front, so that the Carpenter couldn't count how many he
+took: contrariwise."
+
+"That was mean!" Alice said indignantly. "Then I like the Carpenter best—if
+he didn't eat so many as the Walrus."
+
+"But he ate as many as he could get," said Tweedledum.
+
+This was a puzzler. After a pause, Alice began, "Well! They were both very
+unpleasant characters."
+
+* * *
+
+Initially there was an amount of oysters greater than 2.  The Walrus eats
+them systematically in a series of turns. In his first turn he eats one
+oyster; for the *ith* turn, if there are at least *i* oysters remaining, he
+eats *i* oysters, and continues eating in this way until at some turn *k*
+there are less than *k* oysters remaining. Those remaining oysters are then
+eaten by the Carpenter. For example, if there are 13 oysters to begin with,
+then the Walrus eats 10 of those in four turns (eating 1, 2, 3, 4 at each
+turn respectively), and the Carpenter eats 3.
+
+If you know the amount of oysters that they started with, can you determine
+how may oysters did the Walrus and the Carpenter eat?
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 30000$).
+
+Each test case consists of a single line that contains an integer **N**,
+denoting the initial number of oysters.
+
+$3 \leq N \leq 5 \times 10^{11}$
+
+## Output ##
+
+For each test case, print the case number, and then print two integers
+separated by a single space, representing the number of oysters eaten by the
+Walrus and the Carpenter, in that order.
+
+## Sample Input ##
+
+~~~~
+2
+13
+100
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 10 3
+Case 2: 91 9
+~~~~

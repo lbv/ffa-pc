@@ -1,0 +1,65 @@
+% Problem I: It Belongs in a Museum
+
+In his youth, Indiana Jones used to go horseback riding with his Boy Scout
+troop around Utah. One day, he comes across a cave where he finds a group of
+men digging for treasure. From the distance, Indy sees a small table where a
+number of objects are placed. From there, Indiana cannot see the objects on
+the table with much detail, but he can identify an important object by its
+general appearance.
+
+When he gets close, he finds the Cross of Coronado, an "important artifact"
+which belongs in a museum, according to Indy's tenacious spirit as a future
+archaeologist.
+
+![Indy taking the Cross of Coronado](museum.jpg)
+
+You are given a rectangular grid of characters representing the image of
+what Indy sees on the table. You are to determine the number of important
+artifacts that are on the table. The contents of each position in the grid
+can be one of three alternatives:
+
+* A dot (**.**). Represents an empty space on the table.
+* An at sign (**@**). Represents part of an important object.
+* A number sign (**#**). Represents part of an unimportant object.
+
+Any adjacent cells (horizontally, vertically, or diagonally) that contain
+**@** are considered part of the same object.
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 500$).
+
+The first line of each test case contains two integer numbers, **R** and
+**C** which represent the number of rows and columns in the grid.
+$1 \leq R, C \leq 100$.
+
+The following $R$ lines contain $C$ characters, as described above.
+
+## Output ##
+
+For each test case, print the case number, and then print the number of
+important artifacts on the table that belong in a museum.
+
+## Sample Input ##
+
+~~~~
+1
+10 14
+..............
+...@@.........
+.@@@@@@..###..
+.@@@@@@..###..
+...@@....###..
+...@@..@......
+...@@...@.....
+.........@....
+..###.........
+.#####........
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 2
+~~~~

@@ -1,0 +1,99 @@
+% Problem B: Meeting the Red Queen
+
+Alice decides to go outside and see the garden before it's too late and she
+has to go back for dinner. After stepping outside, she has the idea of going
+to the top of a hill nearby to have a better view of the garden. However,
+something strange happens; no matter how many times she tries, it seems
+like she always end up in front of the house's door, the opposite of the way
+she intended!
+
+In the middle of all this, she stops for a moment in front of a large
+flower-bed where she has the chance to have a conversation with some of the
+flowers there, who explain to Alice that "We can talk --when there's anybody
+worth talking to." They chat for a little while until, suddenly, the Red
+Queen (one of the pieces of the chess game Alice had at home, now
+human-sized) appeared on the garden, some distance from Alice and the
+flowers.
+
+At first, Alice tried to walk towards the Queen through the different paths
+in the garden, but it did not work as well as she had planned. After some
+failed attempts, she eventually met with the Queen, but not without first
+noticing the reason why it wasn't as easy as she had hoped.
+
+![Alice meets the Red Queen](redqueen.jpg)
+
+The garden is rectangular in shape and Alice can move in four directions:
+north, south, east and west. However, every time Alice takes a step, the
+Queen moves one step in the opposite direction --unless her path is blocked
+by an obstacle, in which case she stands still in her position. For example,
+every time Alice moves north, the Queen tries to move south, and every time
+Alice moves east, the Queen tries to move west.
+
+If you know the arrangement of the garden (modelled as a rectangular grid),
+with its paths and obstacles, and the initial positions of Alice and the Red
+Queen, can you find out the minimum number of steps required for Alice to
+meet with the Queen? Alice and the Queen meet if they are on the same
+square, or if they are on squares that share one side.
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 200$).
+
+Each test case starts with a blank line. The next line contains two integers
+**R** and **C**, which denote the number of rows and columns of the garden.
+
+$1 \leq R, C \leq 16$
+
+*R* lines follow, each one containing *C* characters, from the following
+alternatives:
+
+* A dot (`.`), representing a free square.
+* A number sign (`#`), representing an obstacle. Neither Alice nor the Queen
+  can move to a square with an obstacle.
+* A letter `A`, denoting the initial position for Alice.
+* A letter `Q`, denoting the initial position for the Red Queen.
+
+There will be one and only one `A` character and one `Q` character in every
+test case.
+
+You have to assume that the garden is surrounded by obstacles outside the $R
+\times C$ squares, so neither Alice nor the Queen can jump out of the grid.
+
+## Output ##
+
+For each test case, print the case number, and then print the minimum number
+of steps that Alice can take to meet with the Queen. If they can't meet,
+print **impossible**.
+
+## Sample Input ##
+
+~~~~
+3
+
+5 10
+......#...
+......#.Q.
+...#..#...
+.A.#......
+...#......
+
+3 8
+....#...
+#####.#.
+A.....#Q
+
+4 6
+.....Q
+####..
+..A#..
+...#..
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 6
+Case 2: 10
+Case 3: impossible
+~~~~

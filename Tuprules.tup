@@ -1,3 +1,5 @@
+.gitignore
+
 out_pandoc_html = build/pandoc/html/%B.md
 out_pandoc_latex = build/pandoc/latex/%B.md
 pc_group = $(TUP_CWD)/utils/<pc>

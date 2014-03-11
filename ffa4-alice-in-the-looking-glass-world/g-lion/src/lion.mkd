@@ -1,0 +1,78 @@
+% Problem G: The Lion and the Unicorn
+
+The conversation with Humpty Dumpty came to an abrupt end and a heavy crash
+shook the entire forest. The next moment thousands of soldiers came running
+through the wood, but Alice was not surprised; somehow she expected to see
+all the King's horses and all the King's men after Humpty Dumpty's great
+fall.
+
+Alice encountered the White King, who introduced her to his two messengers:
+Haigha and Hatta. Haigha was bringing some breaking news to the King:
+
+"They're at it again!"
+
+"Who are at it again?" Alice ventured to ask.
+
+"Why, the Lion and the Unicorn, of course," said the King.
+
+"Fighting for the crown?"
+
+"Yes, to be sure," said the King. Alice remembered an old song she had
+learned at school:
+
+> The Lion and the Unicorn were fighting for the crown:\
+> The Lion beat the Unicorn all round the town.\
+> Some gave them white bread, some gave them brown:\
+> Some gave them plum-cake and drummed them out of town.
+
+![Alice serving the plum cake](lion.jpg)
+
+Alice, the White King and his messengers went all to see the Lion and the
+Unicorn, who were in the middle of a fight. After a while, they decided to
+take a rest, and have some plum cake. Alice was left in charge of cutting
+the cake.
+
+"I say, this isn't fair!" cried the Unicorn. "she has given the Lion twice
+as much as me!"
+
+"She's kept none for herself, anyhow," said the Lion.
+
+- - -
+
+If the plum cake has the shape of a cylinder with radius **r** and height
+**h**, how much cake did the Lion and the Unicorn eat?
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 50000$).
+
+Each case is described in a line that contains two integers: **r** and
+**h**, which represent the radius and height of the cake, respectively. The
+units of the measurements is centimetres.
+
+$1 \leq r, h \leq 500$
+
+## Output ##
+
+For each test case, print the case number, and then print the volume of the
+piece of cake eaten by the Lion, followed by the volume of the piece eaten
+by the Unicorn, in cubic centimetres.
+
+Print the answers as real numbers with exactly two digits after the decimal
+point.
+
+## Sample Input ##
+
+~~~~
+2
+20 10
+50 30
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 8377.58 4188.79
+Case 2: 157079.63 78539.82
+~~~~

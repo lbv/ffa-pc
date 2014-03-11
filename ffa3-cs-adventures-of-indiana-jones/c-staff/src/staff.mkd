@@ -1,0 +1,66 @@
+% Problem C: The Staff of Ra
+
+Indiana is now very close to finding the Ark, but he's not the only one
+interested in it! René Belloq, a French archaeologist who seems to be always
+one step ahead of Indy, is also looking for the Ark, and he has even started
+an excavation on what he thinks is the right spot. However, he's digging in
+the wrong place...
+
+King Shishak, an ancient Egyptian pharaoh, hid the Ark in a secret chamber,
+and the only clues left behind to find it were a "map room", a room with a
+scale model of the city of Tanis, and the _Staff of Ra_, a wood shaft with a
+headpiece on top that can concentrate rays of light from one side of it, and
+radiate a single beam on the other side, without changing the orientation of
+the rays. By placing the staff at the base of the map at the right time of
+the day, it produces a strong ray of light that indicates the correct
+location to dig at.
+
+![Indy discovers the real location of the Ark](staff1.jpg)
+
+Belloq tried to replicate the staff, but he had incomplete information, so
+he built it with the wrong height. Indy, on the other hand, managed to
+create a staff with the right dimensions, thanks to extra information found
+in the Staff's real headpiece.
+
+![Geometric model of the map room](staff2.png)
+
+Given the height of the source of light in the map room (**A**), the
+horizontal distance from that source to the base of the map (**B**), and the
+height of the two staffs (**S**), by how much is Belloq's estimation wrong?
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 5000$).
+
+There are four integer numbers in each test case:
+
+* **A**: The height of the source of light. $1 \leq A \leq 1000$.
+* **B**: The horizontal distance from the source of light to the base of the
+  map. $1 \leq B \leq 1000$.
+* $S_1$: The length of Belloq's staff. $1 \leq S_1 < A$.
+* $S_2$: The length of Indy's staff. $1 \leq S_2 < A$.
+
+All distances are given in centimeters. In addition, you can assume that
+$S_1 \neq S_2$.
+
+## Output ##
+
+For each test case, print the case number, and then print the distance in
+centimeters between the two spots discovered by the two staffs. Print this
+value as a positive, rational number $p/q$ where $p$ and $q$ are coprimes.
+
+## Sample Input ##
+
+~~~~
+2
+350 500 190 200
+800 100 301 300
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 875/12
+Case 2: 160/499
+~~~~

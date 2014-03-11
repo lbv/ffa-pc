@@ -1,0 +1,104 @@
+% Problem A: Jabberwockian Words
+
+*Side note: for more information about this contest, please visit [this
+website](https://sites.google.com/a/diptongonante.com/ffa-pc/contests/free-for-all-4-alice-in-the-looking-glass-world)*
+
+It was a cold winter's evening and Alice, the charming little girl who not
+so long ago visited Wonderland after going down the rabbit--hole, was sitting
+on a great arm--chair at home, talking to one of her kittens, when she
+pondered for the first time about the "reversed" world that she could see in
+the big looking--glass above the chimney, and what would she find if only she
+could get into it.
+
+Knowing Alice's predilection for adventures, it should come as no surprise
+that, at a moment's notice, she was up on the mantelshelf and going
+_through_ the looking--glass. She entered a room very similar to the one she
+came from, but she soon realised that this was a very different place
+compared to the traditional world at this side of the looking--glass.
+
+One of the first things she noticed there was a book; it contained a poem
+titled *The Jabberwock*, which starts with the following verses:
+
+> 'Twas brillig, and the slithy toves\
+> Did gyre and gimble in the wabe;\
+> All mimsy were the borogoves,\
+> And the mome raths outgrabe.
+>
+> "Beware the Jabberwock, my son!\
+> The jaws that bite, the claws that catch!\
+> Beware the Jubjub bird, and shun\
+> The frumious Bandersnatch!"
+
+![The Jabberwock](jabberwockian.jpg)
+
+"It seems very pretty," she said when she had finished it, "but it's rather
+hard to understand! Somehow it seems to fill my head with ideas ---only I
+don't exactly know what they are!"
+
+Indeed, the magic behind many of the words in *The Jabberwock* is that they
+are obscure and familiar at the same time. At any rate, it is not difficult
+to form *some* ideas about the unusual words by comparing them with other,
+more common, vocables with a similar structure.
+
+Your job is to write a program that helps with the analysis of some of these
+words. You are asked to write a *syllabification* program. For any word
+given as input, your program has to split it into syllables according to the
+following rules, where the letter V stands for a vowel and C stands for a
+consonant:
+
+* Whenever you find *VCV*, insert a division after the first
+  vowel. Example: **galumph** becomes **ga**-**lumph**.
+* Whenever you find *VCCV* or *VCCCV*, insert a division after the first
+  consonant. Example: **frabjous** becomes **frab**-**jous**.
+* The previous two rules *do not apply* if the last vowel is an **E**, and
+  it is the last letter of the word. For example, **wabe** remains as one
+  syllable.
+
+Assume that there are only five vowels: **A**, **E**, **I**, **O** and
+**U**. Any other letter is a consonant.
+
+Note that these rules do not always separate English words into syllables
+correctly, but they offer a good first approximation for many words. Be sure
+to strictly apply these three rules, and only them in your program.
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 25000$).
+
+Each test case contains a single word in its own line. The word will contain
+only lower-case letters from the English alphabet, and the length of every
+word will be between 1 and 50.
+
+## Output ##
+
+For each test case, print the case number, and then print the given word
+after inserting hyphen marks (the same character as the minus sign) to
+separate the syllables according to the rules explained above.
+
+## Sample Input ##
+
+~~~~
+8
+brillig
+borogove
+jabberwock
+jubjub
+bandersnatch
+galumph
+frabjous
+wabe
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: bril-lig
+Case 2: bo-ro-gove
+Case 3: jab-ber-wock
+Case 4: jub-jub
+Case 5: ban-der-snatch
+Case 6: ga-lumph
+Case 7: frab-jous
+Case 8: wabe
+~~~~

@@ -1,0 +1,66 @@
+% Problem D: Secret Crates
+
+The Ark of the Covenant is finally recovered by Indiana, and is handed to
+people from the U.S. government. Being such a powerful and mysterious
+artifact, the powers that be decide to take the Ark to Hangar 51, a special
+facility which is the resting place to many secret items. These items are
+placed inside numbered crates before being stored under top secret
+circumstances.
+
+![The crate that holds the Ark of the Covenant](crates1.jpg)
+
+The officers in charge of Hangar 51, being very fond of prime numbers, have
+established a special design for storing items in the warehouse. The place
+is divided in many areas, each area identified by a primer number $P_A$.
+Then, a number **N** of crates are stored in area $P_A$, and for each crate
+$i$ a prime number $P_i$ is chosen, such that $P_A < P_1 < P_2 < P_3 < \dots
+< P_N$, where $(P_i, P_{i+1})$ are consecutive prime numbers, for every $i$
+in $[1, N)$. Each crate is then marked with the composite number $P_A \times
+P_i$.
+
+![Hangar 51](crates2.jpg)
+
+For example, let's say that $P_A$ for a certain area is 11, $P_1$ for the
+same area is 17, and that it stores 3 crates. Then their numbers will be $11
+\times 17$, $11 \times 19$ and $11 \times 23$. Hence, they are labeled: 187,
+209, 253.
+
+You are given the numbers of the first and last crate from a certain area.
+Your task is finding the number $P_A$ that identifies their area, and the
+number $N$ of crates that belong to it.
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 80$).
+
+Each test case contains two positive integer numbers, $I_1$ and $I_2$. $I_1
+< I_2 < 10^{12}$.
+
+In addition, you can assume that both $I_1$ and $I_2$ are composite numbers
+such that:
+
+* $I_1 = P_A \times P_1$.
+* $I_2 = P_A \times P_N$.
+* $P_A, P_1, P_N$ are prime numbers, as described above.
+* $P_N - P_1 \leq 10^6$.
+
+## Output ##
+
+For each test case, print the case number, and then print the message
+"**area $P_A$ has N crates**".
+
+## Sample Input ##
+
+~~~~
+2
+187 253
+9906573 9906753
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: area 11 has 3 crates
+Case 2: area 3 has 7 crates
+~~~~

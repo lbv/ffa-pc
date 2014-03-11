@@ -1,0 +1,79 @@
+% Problem E: Out of Parachutes
+
+The intrepid Indiana Jones, along with a couple of cohorts, has fled
+Shanghai before being caught by Lao Che, a mafia boss with whom he had a
+little business argument. However, the plane they use for their escape is
+actually owned by Lao Che, and Indy and his friends find themselves in
+trouble when the pilots jump from the plane with the only parachutes on
+board. Their only chance now is to jump using an inflatable life raft to
+break the fall.
+
+![Landing on the snow with the raft](parachutes.jpg)
+
+Needless to say, using a raft for such a stunt is extremely dangerous, and
+considering the number of variables involved in a jump like this, their
+accomplishment is nothing short of miraculous.
+
+We will, however, greatly simplify things. Let's assume that the life raft
+is perfectly circular with negligible mass, and that the only requirement to
+keep it stable and guarantee a safe landing is that the combined center of
+mass of all the people on top of it is inside a circle whose radius is 10%
+the size of the raft's radius.
+
+If **N** people jump from a plane on a raft with radius **R**, and knowing
+the mass and the location of each person's center of mass, you will have to
+determine if the raft safely lands on the ground or not.
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 100$).
+
+Each test case begins with a blank line. Next is a line with an integer
+**N** and a floating point number **R**, where $N$ is the number of people
+on the raft, and $R$ is the radius of the raft. $2 \leq N \leq 1000$. $0 < R
+\leq 100$.
+
+$N$ lines follow, each one with three floating point numbers, in order: the
+mass (**M**) and coordinates (**X**, **Y**) of the center of mass of one
+person. The coordinates are given relative to the center of the raft, which
+is located in the origin (coordinates $(0, 0)$), and you can assume that the
+center of mass of everyone is inside the radius of the raft. $0 < M \leq
+200$.
+
+All floating point numbers come with two digits after the decimal point.
+
+## Output ##
+
+For each test case, print the case number, and then print **yes** if the
+center of mass of the $N$ people is located inside a radius of $R/10$.
+Otherwise, print **no**.
+
+## Sample Input ##
+
+~~~~
+2
+
+3 3.00
+72.00 0.20 0.50
+65.00 0.45 0.00
+45.00 -1.80 -1.60
+
+3 3.00
+72.00 0.20 0.50
+65.00 0.45 0.00
+45.00 -2.00 -1.50
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: yes
+Case 2: no
+~~~~
+
+## Note ##
+
+If we call $D$ the distance from the origin to the combined center of mass,
+then it is guaranteed that, using double-precision data types, the absolute
+value of $|R/10 - D|$ is greater than $10^{-4}$.

@@ -1,0 +1,78 @@
+% Problem I: Dinner with the Queens
+
+After a long journey, Alice reached the end of the large field she had been
+exploring, and was rewarded by becoming a Queen. Soon afterwards, she was
+taken to a dinner in her honour, escorted by the Red and White Queens.
+
+Alice took her place at the head of the table, with the Red Queen on one
+side, and the White Queen on the other. The waiters set a leg of mutton
+before Alice, who looked at it rather anxiously, as she had never had to
+carve a joint before.
+
+"You look a little shy: let me introduce you to that leg of mutton," said
+the Red Queen. "Alice--Mutton: Mutton--Alice." The leg of mutton got up in
+the dish and made a little bow to Alice; and Alice returned the bow, not
+knowing whether to be frightened or amused.
+
+![The leg of mutton bowing](dinner.jpg)
+
+"May I give you a slice?" she said, taking up the knife and fork, and
+looking from one Queen to the other. "Certainly not," the Red Queen said,
+very decidedly: "it isn't etiquette to cut any one you've been introduced
+to."
+
+- - -
+
+The leg of mutton saw this as his chance to be saved from being eaten; all
+he had to do was introduce himself to every guest on the table. But he
+planned to do it in a peculiar way. As we know, he introduced himself to
+Alice first, who was sitting in the place of honour. Let's say that there
+were **N** people sitting at the table, identified with the numbers $1, 2,
+\dots, N$. Alice's place is number $1$, with the Red Queen on her right
+occupying place $2$, and the White Queen on her left on place $N$.
+
+The procedure used by the leg of mutton to choose the order in which he
+makes his introductions is as follows: Alice was the first choice, now he
+moves left (relative to Alice, sitting at the table) and counts two people
+and that second person is chosen. Then he moves to the right (again,
+relative to the guests) and counts three people, skipping positions already
+picked. That third person is chosen. He continues in this manner, changing
+directions and increasing the count by one at each turn, until all guests
+have been chosen.
+
+For example, let's say that there are 5 people sitting at the table. The
+order in which the leg of mutton would do his introductions in this case
+would be: 1, 4, 3, 5 and finally 2.
+
+Given the initial number of guests sitting at the table, who would be the
+last person to be introduced to the leg of mutton?
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 200$).
+
+Each test case is given in a single line that contains an integer **N**,
+representing the number of people at the dinner table.
+
+$3 \leq N \leq 50000$
+
+## Output ##
+
+For each test case, print the case number, followed by the number of the
+person who is introduced to the leg of mutton last.
+
+## Sample Input ##
+
+~~~~
+2
+5
+42
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 2
+Case 2: 40
+~~~~

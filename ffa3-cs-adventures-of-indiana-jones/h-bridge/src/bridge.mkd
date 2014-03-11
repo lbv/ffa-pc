@@ -1,0 +1,76 @@
+% Problem H: Climbing the Bridge
+
+With great agility, intelligence, and a little bit of luck, Indy and his
+companions escape from the mines and are ready to go back to the village,
+but this is not over yet...
+
+The temple priest, Mola Ram, is expecting them in a long bridge that they
+must cross in their way back to the village. Indy decides to cut the ropes
+that hold the bridge together, breaking it in two.
+
+![Indy climbing](bridge.jpg)
+
+Now Indy has to hold on to the planks of the bridge and climb up to safety.
+He climbs up grabbing each plank in order until he reaches the top.  However,
+the planks are not in perfect shape, and they could break while he is
+climbing.  Indy won't fall if the plank he is grabbing breaks, because he
+uses the rope to secure himself as well, but he keeps grabbing all remaining
+planks while he can.
+
+We will assume that there is a fixed probability **p** that a plank is
+"good" (i.e. it doesn't break when Indy grabs onto it). This probability is
+the same for all planks, and whatever happens with one plank doesn't affect
+the others.
+
+Let's call a _chain of good planks_ the maximum number of planks that Indy
+grabs in succession such that none of the planks in the chain break. If
+there are **N** planks remaining for Indy to climb, what is the expected
+value for the chain of good planks?
+
+For example, let's say that there are 2 planks remaining, and that $p$ is
+$0.9$. Then, the possible combinations that could happen are:
+
+  Outcome   Probability   Chain
+--------- ------------- -------
+       GG          0.81       2
+       GB          0.09       1
+       BG          0.09       1
+       BB          0.01       0
+
+Where B represents a "bad" plank and G a "good" plank. Then, the expected
+value of the chain would be:
+
+$2 \times 0.81 + 1 \times 0.09 + 1 \times 0.09 + 0 \times 0.01 = 1.8$.
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 100$).
+
+Each test case contains an integer **N**, the number of planks left to
+climb, and a floating point number **p**, the probability of any given plank
+being a "good" one. $1 \leq N \leq 1000$. $0 \leq p \leq 1.0$.
+
+The probabilities are presented with exactly two digits after the decimal
+point.
+
+## Output ##
+
+For each test case, print the case number, and then print the expected value
+of the chain of good planks, as a floating point number with exactly three
+digits after the decimal point.
+
+## Sample Input ##
+
+~~~~
+2
+2 0.90
+42 0.75
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 1.800
+Case 2: 9.764
+~~~~

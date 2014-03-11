@@ -1,0 +1,72 @@
+% Problem F: Unbirthday Presents
+
+After her time with the White Queen, Alice met Humpty Dumpty, a big
+egg-shaped old chap who is very knowledgeable of words and their meanings.
+Alice complimented him on the pretty cravat he had on his neck --although at
+first she confused it with a belt because, in Alice's defense, it is hard to
+tell apart Humpty Dumpty's neck from his waist-- and he explained that it
+was an un-birthday present from the White King and Queen.
+
+![Humpty Dumpty greets Alice](unbirthday.jpg)
+
+* * *
+
+The White King and Queen are very generous and they enjoy giving unbirthday
+presents to their friends. From time to time they decide to buy gifts in the
+following way: the King chooses a positive amount of money **K**, and the Queen
+chooses a positive amount of money **Q**. Then they decide to buy the
+maximum possible amount of gifts, spending all their allotted money and each
+of them spending equal portions of their shares for all the gifts.
+
+For example, if the King chooses $K=6$ and the Queen chooses $Q=4$ then they
+can buy a maximum of 2 gifts, and in that case the King would spend 3 pounds
+per gift, and the Queen would spend 2 pounds per gift. However, if they
+would choose $K=5$ and $Q=3$ then the maximum number of gifts they would buy
+would be 1.
+
+Let's say that the King never spends less money than the Queen on gifts, and
+that there is a limit **P** on the amount of money each of them can set
+aside for unbirthday gifts.
+
+Being very unselfish monarchs, the King and Queen want to choose amounts of
+money that that would result in them buying more than one gift. How many
+different valid combinations $(K, Q)$ are there that would make them buy
+only one gift?
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 100000$).
+
+Each test case consists a single integer **P** on its own line.
+
+$1 \leq P \leq 10^7$
+
+## Output ##
+
+For each test case, print the case number, and then the number of
+different pairs $(K, Q)$ with $1 \leq Q \leq K \leq P$ such that the King
+and Queen would only buy one gift with that money.
+
+Print the result modulo $2^{32}$.
+
+## Sample Input ##
+
+~~~~
+3
+3
+5
+8
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 4
+Case 2: 10
+Case 3: 22
+~~~~
+
+## Note ##
+
+The test data is large. Make sure to use fast I/O methods.

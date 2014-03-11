@@ -1,0 +1,81 @@
+% Problem E: The White Queen's Impossibilities
+
+Tweedledee and Tweedledum disappeared suddenly and Alice found herself
+alone again when a shawl came tumbling down the forest because of the wind.
+It was the White Queen's shawl, which Alice returned to her as they struck
+up a conversation.
+
+![Alice helping the White Queen with her hair](whitequeen.jpg)
+
+Alice learned that the White Queen has some extraordinary abilities, such as
+a memory that works in two directions: backwards into the past, and forward
+into the future! Not only that, but also the Queen was an expert on
+believing impossible things. At some point during their talk, Alice says to
+the Queen: "one can't believe impossible things," to which the Queen replies
+"I daresay you haven't had much practice. When I was your age, I always did
+it for half-an-hour a day. Why, sometimes I've believed as many as six
+impossible things before breakfast."
+
+* * *
+
+As a matter of fact, the Queen was being modest about her ability to believe
+in impossible things. Due to her ability to remember things from the future,
+she can actually recall a large number of impossible things that she can
+choose to believe in on any given day.
+
+Let's say there are **n** impossible things that the White Queen can
+remember, and she chooses a certain number of those things to believe each
+day during a period of **k** days. We will denote the number of impossible
+things that the Queen believes in on the *ith* day as $T_i$. The Queen wants
+to believe a certain number of impossibilities each day, such that for any
+pair of days $(i, j)$ the difference $|T_i - T_j|$ is never greater than 1.
+How many different valid arrangements are there for the White Queen to
+believe the $n$ impossible things during the $k$ days?
+
+For example, if $n=3$ and $k=2$, then there are 6 valid arrangements,
+enumerated in the table below (the 3 impossible things are denoted A, B and
+C):
+
+  Alternative   Day 1   Day 2
+------------- ------- -------
+            1       A    B, C
+            2       B    A, C
+            3       C    A, B
+            4    A, B       C
+            5    A, C       B
+            6    B, C       A
+
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 1000$).
+
+Each test case consists of two integer numbers **n** and **k**, which
+represent the number of impossible things and the number of days,
+respectively.
+
+$1 \leq n, k \leq 10^6$
+
+## Output ##
+
+For each test case, print the case number, and then the number of valid
+arrangements according to the constraints explained above. Print the answer
+modulo $1000000007$.
+
+## Sample Input ##
+
+~~~~
+3
+3 2
+1 2
+7 3
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 6
+Case 2: 2
+Case 3: 630
+~~~~

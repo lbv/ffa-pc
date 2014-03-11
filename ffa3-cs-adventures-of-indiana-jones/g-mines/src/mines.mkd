@@ -1,0 +1,76 @@
+% Problem G: Escape from the Mines
+
+Things take a turn for the worse inside Pankot Palace, as Indy and friends
+discover an underground temple where human sacrifices are executed, and
+they find that the village children are being enslaved mining the mountain.
+
+The stone they search is finally recovered, and they are about to flee as
+quick as possible, but they can't leave the children there! Short Round has
+the keys to help the children, and after freeing them, he must reunite with
+Indiana, who is fighting a guard.
+
+![The village children escaping](mines.jpg)
+
+We will assume that the mines can be represented by a rectangular grid, and
+that each step can be taken in one of four direction: up, down, left or
+right. Help Short Round find the minimal number of steps to go from his
+current place, to Indy's location, after going through all places where
+children can be found in order to free them.
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 100$).
+
+The first line of each test case contains three integers, **R**, **C** and
+**H**. $R$ and $C$ are the number of rows and columns of the map,
+respectively, and $H$ is the number of cells where children can be found.
+$1 \leq R, C \leq 100$. $0 \leq H \leq 6$.
+
+Then $R$ lines follow, each one with $C$ characters, representing the maze.
+Each character can be:
+
+* The letter **S**, which denotes Short Round's initial position.
+* The letter **I**, which denotes Indy's position, and Short Round's
+  destination.
+* An at sign (**@**), which represents a cell where a group of children
+  stands.
+* A dot (**.**), representing a free cell.
+* A number sign (**#**), representing an obstacle. Short Round can move
+  freely throughout the mines, except in cells where an obstacle is found.
+
+You can assume that there will be exactly one cell with the letter **S**,
+one cell with the letter **I**, and $H$ cells with an at sign (**@**).
+
+## Output ##
+
+For each test case, print the case number, and then print the minimal number
+of steps to get to Indy, after freeing all children, or print **impossible**
+if it can't be done.
+
+## Sample Input ##
+
+~~~~
+2
+7 11 3
+###########
+#....S....#
+#......@..#
+#....###..#
+#.@..#@...#
+#....#...I#
+###########
+5 9 0
+#########
+#...#...#
+#.S.#.I.#
+#...#...#
+#########
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 22
+Case 2: impossible
+~~~~

@@ -1,0 +1,89 @@
+% Problem F: Exotic Food
+
+Our group of heroes, professor Jones, singer Willie Scott and eleven
+year-old _Short Round_, embark in a quest to recover a sacred stone that was
+stolen from an Indian village. This takes them to Pankot Palace, where they
+attend a fancy banquet specially prepared for the Maharajah, the Prime
+Minister and all their guests. But despite Willie's and Short Round's
+initial enthusiasm, they quickly realise that the dishes presented to them
+are maybe a little too exotic for them.
+
+![Dessert is ready](food.jpg)
+
+The palace staff is aware that sometimes their food is not entirely to their
+visitors liking, so they implement a new system to increase the overall
+satisfaction of all guests.
+
+They can prepare a number **N** of different dishes, but before serving the
+banquet, they poll every guest, asking them to choose a "menu type", and
+to select two dishes (known as choices **A** and **B**) according to their
+preferences. There are three menu types targeted to different tastes:
+
+1. Familiar with local cuisine. For guests who select their two favourite
+   dishes. The guest is satisfied if either **A** or **B** is served.
+2. Unfamiliar with local cuisine. For guests who want to choose the two
+   dishes they find least appetising. The guest is satisfied if either
+   **A** or **B** is _not_ served.
+3. Neutral. The guest selects one dish that he may like, and one that he
+   thinks he will dislike. Satisfied if either **A** is served, or **B** is
+   _not_ served.
+
+Given the choices of all guests, can you determine if the palace staff can
+serve a banquet that satisfies everyone?
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 100$).
+
+Each case starts with two integer numbers in the first line: the number of
+dishes (**N**) and the number of people sitting at the table (**M**). $1
+\leq N \leq 10000$. $1 \leq M \leq 5000$.
+
+$M$ lines follow, each one containing three integers: **t**, **A** and
+**B**, where $t$ is the menu type selected by one person, and $A$ and $B$
+are his/her two choices. $1 \leq t \leq 3$. $1 \leq A, B \leq N$.
+
+## Output ##
+
+For each test case, print the case number, and print either **yes** or
+**no**, indicating if it is possible to serve a banquet that satisfies
+everyone or not.
+
+## Sample Input ##
+
+~~~~
+2
+5 7
+1 1 2
+1 3 4
+1 3 5
+2 1 3
+2 1 4
+2 1 5
+3 1 5
+3 4
+1 1 3
+2 1 2
+3 1 3
+3 2 1
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: yes
+Case 2: no
+~~~~
+
+## Explanation of Sample Cases##
+
+In the first case, everyone can be satisfied if, for example, dishes 2, 3
+and 4 are served.
+
+In the second case, there is no possible combination of dishes that
+satisfies the four people.
+
+## Note ##
+
+The test data is large. Make sure to use fast I/O methods.

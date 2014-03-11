@@ -1,0 +1,81 @@
+% Problem J: Shaking
+
+The dinner party was getting out of control, with the candles all growing up
+to the ceiling, the bottles flying around using the plates as wings, and the
+soup--ladles walking up the table, when Alice decided she had had enough of
+it.
+
+"I can't stand this any longer!" she cried, as she jumped up and seized
+the tablecloth with both hands: one good pull, and plates, dishes, guests,
+and candles came crashing down together in a heap on the floor.
+
+"And as for you," she went on, turning fiercely upon the Red Queen, whom she
+considered as the cause of all the mischief ---but the Queen was no longer
+at her side--- she had suddenly dwindled down to the size of a little doll,
+and was now on the table, merrily running round and round.
+
+"As for you," she repeated, catching hold of the little creature in the very
+act of jumping over a bottle which had just lighted upon the table, "I'll
+shake you into a kitten, that I will!"
+
+![Shaking the Red Queen](shaking.jpg)
+
+- - -
+
+We will analyse the motion of the Red Queen when Alice started to shook her.
+We'll adopt a frame of reference such that the Queen's movement changes her
+position in only one direction, along the **Y** axis. Furthermore, the exact
+position **y** of the Queen at some time **t** is described by the following
+function:
+
+$y(0) = 0$ \
+$y(t) = \ln{t} \cdot \sin{(t^{\frac{\pi}{2}})}$ \ \ \  for $t > 0$
+
+The graph below illustrates the behaviour of this function for $t < 10$.
+Lower values of $y$ mean that the Queen is closer to Alice, while a higher
+value of $y$ means that the Queen is farther away from Alice.
+
+![Position vs. Time](shaking-graph.png)
+
+As you can see, Alice starts pulling back the Queen towards her from $t=0$
+to $t \approx 0.5$, and then pushes her away until $t \approx 1.6$. She
+continues with this oscillatory motion for some time.
+
+Given a point in time **t**, you have to determine if at that moment the
+Queen is moving forward (away from Alice) or backward (towards Alice).
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 10000$).
+
+Each test case is described in a single line that contains a real number
+**t**.
+
+$0 < t < 100$
+
+Every value of $t$ will come with two digits after the decimal point. It is
+guaranteed that $y(t)$ will be monotonic in the range
+$(t - 10^{-3} : t + 10^{-3})$.
+
+## Output ##
+
+For each test case, print the case number, and then print **forward** or
+**backward** depending on the movement of the Queen at time $t$.
+
+## Sample Input ##
+
+~~~~
+3
+0.30
+6.72
+50.00
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: backward
+Case 2: forward
+Case 3: forward
+~~~~

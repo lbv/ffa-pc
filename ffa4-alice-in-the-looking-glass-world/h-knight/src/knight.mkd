@@ -1,0 +1,86 @@
+% Problem H: The White Knight's Belongings
+
+The Lion, the Unicorn and everyone else were *drummed out of town*, and
+Alice was alone again in the forest, although not for very long. In a
+moment, Alice was joined by two Knights on their steeds. The Red Knight
+arrived first, and wanted to take Alice prisoner, but the White Knight made
+an appearance shortly after, ready to rescue her!
+
+The two Knights battled for a while, and finally the White Knight came out
+victorious. The Red Knight left the scene while the White Knight stayed with
+Alice to keep her company. Alice learned that the Knight was a great
+inventor, who had some of his best ideas while being upside down ---usually
+the result of falling from his horse head--first.
+
+![The White Knight on his horse](knight.jpg)
+
+He also was carrying with him many curious artifacts, which he liked to keep
+at hand just to be ready for *anything*. His horse was attired with anklets
+around his feet, for instance, as a protection for the bites of sharks.
+Among his possessions you could find a wooden sword, an umbrella, a rattle,
+a beehive, mousetraps, candlesticks and many other things.
+
+- - -
+
+The White Knight uses a number of bags to carry all of his belongings. He
+also has a method to put the objects in the bags: for any object **A**
+inside a certain bag, he makes sure that there is at least one other object
+**B** inside the same bag, such that the names of *A* and *B* have the same
+amount of vowels *or* they have the same amount of consonants. According to
+this criteria, he can put a *sword* in the same bag as a *rattle* (each with
+4 consonants) or he can put an *umbrella* and a *candlestick* in the same
+bag (each has 3 vowels).
+
+Given the list of objects that the White Knight owns, what is the minimum
+number of bags he could use to carry his belongings?
+
+Assume that there are only 5 vowels: **a**, **e**, **i**, **o** and **u**.
+All other letters are consonants. You may also assume that the Knight's bags
+have an unlimited capacity.
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 1250$).
+
+Each case starts with a line that has single integer **N**, that represents
+the number of objects that the White Knight is carrying.
+
+$0 < N \leq 100$
+
+$N$ lines follow, each one with a string that describes an object. Each name
+is composed of lowercase letters from the English alphabet only. All strings
+have a length between 1 and 50 (inclusive).
+
+## Output ##
+
+For each test case, print the case number, followed by the minimum number of
+bags that the White Knight needs to carry all of his objects.
+
+## Sample Input ##
+
+~~~~
+2
+4
+sword
+umbrella
+rattle
+candlestick
+5
+mousetrap
+beehive
+bell
+brush
+carrot
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 2
+Case 2: 1
+~~~~
+
+## Note ##
+
+The test data is large. Make sure to use fast I/O methods.

@@ -1,0 +1,93 @@
+% Problem B: Marion's Drinking Game
+
+Indiana gets involved in a perilous quest to find the Ark of the Covenant.
+In his journey, he finds himself requiring the assistance of Marion
+Ravenwood, an old love interest of him, who he hasn't seen in years.
+
+He finds her in Nepal, where she owns a local tavern, and where she conducts
+drinking contests as a source of income. She does have an almost unnatural
+ability to drink liquor, but she also has an advantage against most players,
+because she is very good at the type of game that is played in her tavern.
+
+![Marion participating in a drinking contest](marion.jpg)
+
+The game is played like this: a number of shot glasses with liquor are
+placed on a table. These glasses are arranged in **N** rows, where each row
+can have any positive number of glasses in it. Two players take turns
+drinking a certain number of shots from the table. At each player's turn,
+he/she has to pick a row, and drink a valid number of shots from that row.
+If it's the first row, only one shot can be drank. From the second row, 1 or
+2 shots.  From the third row, 1, 2 or 3 shots... and so on until the _Nth_
+row, where any number of shots between 1 and N can be drank in a single
+turn.
+
+The liquor in all these glasses is actually very mild, so any player can
+withstand these rounds. However, an extra glass of very strong liquor that
+is guaranteed to knock out anyone who drinks it, is placed aside, and it is
+drank only after all the other glasses are empty.  This means that whoever
+drinks the last shot from the rows of glasses forces his/her opponent to
+drink the last glass, ensuring a victory.
+
+Marion accepts a challenge from a robust man, and she goes first. Given a
+random arrangement of the drinks on the table, and assuming that both
+players drink optimally (they make the best decisions at each round), will
+she win the game?
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 1000$).
+
+Each test case start with a single integer **N** in a line of its own, where
+$N$ is the number of rows of drinks in the game.  $1 \leq N \leq 100$.
+
+The second line of each test case contains $N$ integers separated by single
+spaces. The _ith_ integer represents the number of glasses places on the
+_ith_ row, starting with row number one. All these integers are in the range
+$[1, 1500]$.
+
+## Output ##
+
+For each test case, print the case number, and then a message reporting if
+Marion wins the game or not.
+
+The message must be either **Marion wins** or **Marion loses**, accordingly.
+
+## Sample Input ##
+
+~~~~
+4
+1
+11
+1
+12
+2
+2 2
+2
+2 3
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: Marion wins
+Case 2: Marion loses
+Case 3: Marion wins
+Case 4: Marion loses
+~~~~
+
+## Explanation of Sample Cases ##
+
+In the first two games, there is only one row of glasses, so every player can
+drink one and only shot at every turn. From this, it's easy to figure out
+the winner.
+
+In the third case, Marion can start by having 2 drinks from the second row,
+leaving no choice to her opponent but to drink one shot from the first row,
+and she has the last drink.
+
+In the fourth case, Marion has three alternatives for the first move: drink
+one shot from the first row, or drink 1 or 2 shots from the second row.
+However, no matter what decision she takes, her opponent can drink the rest
+of shots from the same row, leaving the other row unchanged, and from that
+point on, his victory is guaranteed.

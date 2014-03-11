@@ -1,0 +1,61 @@
+% Problem K: Waking
+
+Alice went on shaking her, and the Queen kept on growing shorter---and
+fatter---and softer---and rounder---and...
+
+...it really *was* a kitten, after all.
+
+![Kitten, descendant of Dinah](waking.jpg)
+
+- - -
+
+Alice awakes in her armchair, having witnessed the transformation of Kitten,
+from the Red Queen in her dreams to his usual self now in her arms.
+
+Let us consider a different kind of transformation, one that applies to
+strings of characters. Let's say that you wanted to turn the string
+**QUEEN** into the string **KITTEN** using only two types of operations:
+erasing a character (in any position) and inserting a character (into any
+position). It's not difficult to see that the minimum number of operations
+to complete the transformation *QUEEN* $\rightarrow$ *KITTEN* is 7.
+
+Write a program to find the minimum number of operations required to
+transform strings.
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 100$).
+
+Each test case begins with a blank line. Then two strings are presented,
+each one in its own line. All strings will be formed by uppercase letters
+from the English alphabet, and their lengths will be between 1 and 300
+(inclusive).
+
+## Output ##
+
+For each test case, print the case number, and then print the minimum number
+of operations to transform any of the two strings into the other.
+
+## Sample Input ##
+
+~~~~
+3
+
+QUEEN
+KITTEN
+
+HATTER
+HATTA
+
+HARE
+HAIGHA
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 7
+Case 2: 3
+Case 3: 6
+~~~~

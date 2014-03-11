@@ -1,0 +1,65 @@
+% Problem K: The Grail Trials (I)
+
+Indy and his father reach the resting place of the Grail, but Henry is
+mortally wounded by Indy's rivals! Indy finds himself forced to recover the
+Grail to save his father, and to do that he needs to pass a series of
+dangerous trials. Now Indy's only alternative is to succeed where many
+others have failed before him.
+
+The first trial is _The Breath of God_. As Indy approaches the small
+corridor that leads to the Grail, he sees decapitated bodies on the floor...
+
+![The breath of God: only the penitent man will pass](trials1-1.jpg)
+
+With the help of Henry's diary, Indy has a small clue as to what this trial
+is about. At the last moment, he kneels down and jumps, as two large blades
+come from the sides of the corridor.
+
+The blades are placed one in front of the other, and they are setup such
+that each blade springs from one wall with an angle that makes it touch the
+corner where the opposite wall meets the floor.
+
+![Front view of the corridor and the blades](trials1-2.png)
+
+When seen from the front, there is a point where the blades seem to
+intersect. Indy chooses to jump through the region where there is a larger
+distance from the intersection point to a wall.
+
+The length of the blades are denoted **A** and **B**. Given $A$, $B$, and
+the height of the intersection point (**h**), determine the horizontal
+distance from that point to the farthest wall (**x**).
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 1000$).
+
+Each test case contains three floating point numbers: **A**, **B** and
+**h**. All of them will have two digits after the decimal point.
+
+$0 < A, B, h \leq 1000.00$
+
+You can assume that all data correspond to valid geometrical models.
+
+## Output ##
+
+For each test case, print the case number, and then print the distance from
+the intersection point to the farthest wall, **x**. Print the result as a
+floating point number with exactly three digits after the decimal point.
+
+## Sample Input ##
+
+~~~~
+3
+300.00 350.42 131.41
+280.90 170.10 50.20
+400.00 400.00 132.28
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 103.592
+Case 2: 123.570
+Case 3: 150.007
+~~~~

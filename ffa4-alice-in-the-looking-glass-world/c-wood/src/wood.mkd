@@ -1,0 +1,109 @@
+% Problem C: The Wood Where Things Have No Name
+
+Alice's exploration of the outside world continues, and she meets a friendly
+Gnat, who tells her many interesting things about the insects that live in
+the Looking-Glass world, such as the rocking-horse-fly and the
+bread-and-butter-fly. However, the Gnat warns Alice, "further on, in the
+wood down there, they've got no names," which means exactly what
+you would think --in that wood, nothing has a name.
+
+Understandably, Alice was a little worried about what would happen to her
+when she entered the wood. All of a sudden she noticed that she had
+forgotten the names of the things around her, even her own name! She was
+trying to remember it, when a Fawn came wandering by.
+
+"What do you call yourself?" the Fawn said at last.
+
+"I wish I knew!" thought poor Alice. "Nothing, just now."
+
+"Think again," it said: "that won't do."
+
+Alice thought, but nothing came of it. "Please, would you tell me what you
+call yourself? I think that might help a little."
+
+"I'll tell you, if you'll come a little further on," the Fawn said. "I can't
+remember here."
+
+![Alice and the Fawn](wood-1.jpg)
+
+So they walked on together through the wood till they came out into another
+open field, and here the Fawn jumped excitedly.  "I'm a Fawn!" It cried out
+in a voice of delight. "And, dear me! you're a human child!" A sudden look
+of alarm came into its eyes, and in another moment it had darted away at
+full speed.
+
+- - -
+
+The wood has the shape of a convex polygon and, as you have learned, inside
+its area nothing has a name. If Alice walks in a straight line and enters
+the wood, what is the maximum possible distance that she has to walk until
+she can remember her name again?
+
+Consider the following example: let's say that the wood is delimited by the
+following six vertices (in counter-clockwise order): $(0, 0), (2, 0), (5,
+3), (5, 5), (3, 5), (0, 2)$.
+
+The diagram below illustrates this case, where the maximum distance is
+between the points $(0, 0)$ and $(5, 5)$ and has a magnitude of about
+$7.071$.
+
+![Wood's perimeter, and its maximum diameter](wood-2.png)
+
+## Input ##
+
+Input starts with a positive integer **T**, that denotes the number of test
+cases ($T \leq 30$).
+
+The first line of each test case contains an integer **N**, which denotes
+the number of points of the polygon.
+
+$3 \leq N \leq 10000$
+
+The following $N$ lines contain two integers **x** and **y**, which are the
+coordinates of one of the vertices of the polygon. The polygon is described
+with all its vertices in counter-clockwise order. You can assume that the
+polygon described is convex, and that no three consecutive vertices are
+collinear.
+
+$-10^6 \leq x, y \leq 10^6$
+
+## Output ##
+
+For each test case, print the case number, and then print the maximum
+possible distance for Alice to walk across the wood in a straight line.
+Print the answer as a real number with exactly three digits after the
+decimal point.
+
+## Sample Input ##
+
+~~~~
+3
+6
+0 0
+2 0
+5 3
+5 5
+3 5
+0 2
+4
+10 10
+20 10
+20 20
+10 20
+3
+-3 -2
+0 -2
+0 2
+~~~~
+
+## Output for Sample Input ##
+
+~~~~
+Case 1: 7.071
+Case 2: 14.142
+Case 3: 5.000
+~~~~
+
+## Note ##
+
+The test data is large. Make sure to use fast I/O methods.

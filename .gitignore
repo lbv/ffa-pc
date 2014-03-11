@@ -1,10 +1,12 @@
 /.tup
 /node_modules
 
+/ffa1*
+/ffa2*
+
 /zips
 
 /*/unified
-/*/*/src
 /*/*/img
 /*/*/htm
 /*/*/orig
