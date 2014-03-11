@@ -1,0 +1,1 @@
+: foreach src/*.coffee |> coffee -c -o lib/ %f |> lib/%B.js ../<pc>

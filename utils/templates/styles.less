@@ -1,0 +1,122 @@
+@font-mono: "Inconsolata", monospace;
+@font-sans: "Open Sans", sans-serif;
+@font-serif: "Cardo", serif;
+
+
+.ffa-problem {
+
+	text-align  : justify;
+	font-family : @font-serif;
+	font-size   : 12pt;
+
+	blockquote {
+		border-left : 10px solid #cccccc;
+		margin      : 1.5em 10px;
+		background  : #f9f9f9;
+		padding     : 1em 10px;
+	}
+
+	div.table {
+		table {
+			border-collapse : separate;
+			border-spacing  : 12px 6px;
+		}
+		th { border-bottom : 1px solid black; }
+	}
+
+	h2 { margin-bottom : 0px; }
+
+	h2, .table-io th {
+		text-align  : left;
+		font-size   : 15pt;
+		font-weight : bold;
+		font-family : @font-sans;
+		color       : #3465a4;
+	}
+
+	hr {
+		border           : none;
+		height           : 1px;
+		width            : 60%;
+		background-color : #363636;
+		margin-top       : 18px;
+		margin-bottom    : 18px;
+	}
+
+	pre {
+		padding : 0em;
+		margin  : 2px;
+	}
+
+	pre, code {
+		font-size   : 11pt;
+		font-family : @font-mono;
+	}
+
+	table {
+		border          : 1px solid black;
+		border-collapse : collapse;
+		margin-left     : auto;
+		margin-right    : auto;
+		margin-bottom   : 1em;
+
+		td, th {
+			padding : 6px;
+			margin  : 0px;
+		}
+		th { border-bottom : 1px solid black; }
+	}
+
+	table.table-io {
+		border          : 1px solid black;
+		border-collapse : collapse;
+		margin          : 1.5em 0px;
+
+		td, th {
+			padding : 4px;
+			margin  : 0px;
+			border  : 1px solid black;
+		}
+		td { vertical-align : top; }
+		pre { min-width : 320px; }
+	}
+
+	.caption {
+		font-size  : 10pt;
+		text-align : center;
+	}
+
+	.ffa-commentary {
+		margin-left   : 20%;
+		margin-right  : 20%;
+		margin-top    : 8pt;
+		margin-bottom : 8pt;
+		font-size     : 10.5pt;
+	}
+
+	.ffa-figure-right {
+		float      : right;
+		margin     : auto;
+		padding    : 16px;
+		text-align : center;
+	}
+
+	.ffa-more-info {
+		font-style : oblique;
+		font-size  : 10.5pt;
+	}
+
+	.ffa-speak {
+		padding-left  : 2em;
+		margin-bottom : 16px;
+		text-indent   : -2em;
+	}
+
+	.ffa-speaker {
+		font-style   : oblique;
+		margin-right : 0.5em;
+		font-size    : 11.5pt;
+	}
+
+}
+
