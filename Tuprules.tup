@@ -1,5 +1,10 @@
 .gitignore
 
+CPPFLAGS = -Wall -Wno-unused-result -O2
+CPPDBG = -Wall -g
+
+data_in = build/prg/data.in
+data_out = build/prg/data.out
 out_pandoc_html = build/pandoc/html/%B.md
 out_pandoc_latex = build/pandoc/latex/%B.md
 pc_group = $(TUP_CWD)/utils/<pc>
@@ -7,6 +12,9 @@ tpl_htm = $(TUP_CWD)/utils/templates/tpl.htm
 tpl_tex = $(TUP_CWD)/utils/templates/tpl.tex
 tpl_css = $(TUP_CWD)/utils/templates/styles.css
 
+
+!gen_in = |> ^ GEN in^ ./build/prg/%b > %o |> $(data_in)
+!gen_out = |> ^ GEN out^ ./build/prg/%b < $(data_in) > %o |> $(data_out)
 
 !html = | $(tpl_css) |> ^ PANDOC html^ pandoc -S -A $(tpl_css) --mathjax=XXX --template $(tpl_htm) -o %o %f |> build/html/%B.html
 
@@ -16,7 +24,11 @@ tpl_css = $(TUP_CWD)/utils/templates/styles.css
 
 !latex = |> ^ PANDOC latex^ pandoc -S --template $(tpl_tex) -o %o %f |> build/latex/%B.tex
 
-!pdf = |> ^ PANDOC pdf^ pandoc -S --template $(tpl_tex) -o %o %f |> build/pdf/%B.pdf
-
 !pandoc_html = | $(pc_group) |> ^ COFFEE pandoc:html^ coffee %f -f html > %o |>
 !pandoc_latex = | $(pc_group) |> ^ COFFEE pandoc:latex^ coffee %f -f latex > %o |>
+
+!pdf = |> ^ PANDOC pdf^ pandoc -S --template $(tpl_tex) -o %o %f |> build/pdf/%B.pdf
+
+!prg_cp = |> ^ CP %f^ cp -f %f %o |> build/prg/%b
+!prg = |> ^ CC %f^ gcc $(CPPFLAGS) -o %o %f |> build/prg/%B
+!prg_dbg = |> ^ CC %f:dbg^ gcc $(CPPDBG) -o %o %f |> build/dbg/%B

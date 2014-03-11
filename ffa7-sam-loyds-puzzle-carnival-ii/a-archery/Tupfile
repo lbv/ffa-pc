@@ -1,0 +1,28 @@
+include_rules
+
+src = src/archery.coffee
+sol = prg/archery.cpp
+
+: $(src) |> !pandoc_html |> $(out_pandoc_html) {htm}
+: $(src) |> !pandoc_latex |> $(out_pandoc_latex) {tex}
+
+: img/archery.png |> !img_latex |> build/img/latex/%B.jpg {img_tex}
+: img/archery.png |> !img_html |> build/html/%B.jpg
+
+: {htm} |> !html |>
+: {tex} | {img_tex} |> !latex |>
+: {tex} | {img_tex} |> !pdf |>
+
+: prg/sample.in |> !prg_cp |>
+: $(sol) |> !prg |>
+: $(sol) |> !prg_dbg |>
+
+: prg/archery-bfs.cpp |> !prg |> {sol}
+: prg/archery-bfs.cpp |> !prg_dbg |>
+
+: prg/check.cpp |> !prg |>
+
+: prg/gen.cpp |> !prg |> {gen}
+
+: {gen} |> !gen_in |> {data_in}
+: {sol} | {data_in} |> !gen_out |>
