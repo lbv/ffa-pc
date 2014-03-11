@@ -1,13 +1,10 @@
-/ffa1*
-/ffa2*
-/zips*
+/.tup
+/node_modules
 
-Rakefile
+/zips
+
 /*/unified
 /*/*/src
 /*/*/img
 /*/*/htm
 /*/*/orig
-
-/*/*/code/*
-!*.cpp
