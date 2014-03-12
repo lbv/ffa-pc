@@ -14,7 +14,9 @@ src_img = src/imgs.coffee
 : $(img) |> !img_html |> build/html/%B.jpg
 
 : {htm} |> !html |>
-: {tex} | {img_tex} |> !latex |>
+: {tex} |> !latex |>
+: {tex} |> !latex_embed |>
+
 : {tex} | {img_tex} |> !pdf |>
 
 : prg/sample.in |> !prg_cp |>

@@ -1,9 +1,9 @@
 include_rules
 
-img = img/.png
-sol = prg/.cpp
+img = img/courier.png
+sol = prg/courier.cpp
 
-src_doc = src/.coffee
+src_doc = src/courier.coffee
 src_img = src/imgs.coffee
 
 : $(src_doc) |> !pandoc_html |> {htm}
@@ -19,12 +19,12 @@ src_img = src/imgs.coffee
 : {tex} | {img_tex} |> !pdf |>
 
 : prg/sample.in |> !prg_cp |>
-#: $(sol) |> !prg |> {sol}
-#: $(sol) |> !prg_dbg |>
+: $(sol) |> !prg |> {sol}
+: $(sol) |> !prg_dbg |>
 
-#: prg/check.cpp |> !prg |>
+: prg/check.cpp |> !prg |>
 
-#: prg/gen.cpp |> !prg |> {gen}
+: prg/gen.cpp |> !prg |> {gen}
 
-#: {gen} |> !gen_in |> {data_in}
-#: {sol} | {data_in} |> !gen_out |>
+: {gen} |> !gen_in |> {data_in}
+: {sol} | {data_in} |> !gen_out |>

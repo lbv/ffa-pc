@@ -10,7 +10,7 @@ b.build """
 
 #{b.figureRight 'The young archer scored 100 points', 'archery.jpg', 0.4, 8}
 
-Here is an odd little puzzle which occured the other day at an archery
+Here is an odd little puzzle which occurred the other day at an archery
 meeting. The young lady who carried off the first prize scored exactly one
 hundred points. Can you figure out how many arrows she used, as well as the
 points awarded to each arrow?

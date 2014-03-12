@@ -1,5 +1,6 @@
 path = require 'path'
 sh = require 'shelljs'
+spawn = require('child_process').spawn
 
 
 DIR_SKEL = path.normalize "#{__dirname}/../../skeletons"
@@ -38,3 +39,12 @@ module.exports =
 			sh.mkdir '-p', dir_prg
 			sh.cp '-r', "#{DIR_SKEL}/prg", opt.dir
 			sh.mv "#{dir_prg}/problem.cpp", "#{dir_prg}/#{name}.cpp"
+
+	taskSpell: (doc) ->
+		task 'spell', 'Check spelling of document', ->
+			console.log "Checking spell of #{doc}.."
+			path_dict = '../spell-dict'
+			path_doc = "./build/latex/#{doc}.embed.tex"
+
+			spawn 'aspell', [ '-p', path_dict, '-d', 'en', '-c', path_doc ],
+				{ stdio: 'inherit' }

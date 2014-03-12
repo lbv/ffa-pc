@@ -25,6 +25,7 @@ tpl_css = $(TUP_CWD)/utils/templates/styles.css
 !img_latex = | $(src_img) $(pc_doc) |> ^ COFFEE img:latex^ coffee $(src_img) -f latex %b |>
 
 !latex = |> ^ PANDOC latex^ pandoc -S --template $(tpl_tex) -o %o %f |> build/latex/%B.tex
+!latex_embed = |> ^ PANDOC latex:embed^ pandoc -S -o %o %f |> build/latex/%B.embed.tex
 
 !pandoc_html = | $(pc_doc) |> ^ COFFEE pandoc:html^ coffee $(src_doc) -f html > %o |> $(out_pandoc_html)
 !pandoc_latex = | $(pc_doc) |> ^ COFFEE pandoc:latex^ coffee $(src_doc) -f latex > %o |> $(out_pandoc_latex)
