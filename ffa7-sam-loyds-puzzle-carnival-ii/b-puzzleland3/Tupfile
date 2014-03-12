@@ -1,11 +1,10 @@
 include_rules
 
-img = img/archery.png
-sol = prg/archery-bfs.cpp
+img = img/puzzleland3.png
+sol = prg/puzzleland3.cpp
 
-src_doc = src/archery.coffee
+src_doc = src/puzzleland3.coffee
 src_img = src/imgs.coffee
-
 
 : $(src_doc) |> !pandoc_html |> {htm}
 : $(src_doc) |> !pandoc_latex |> {tex}
@@ -20,8 +19,6 @@ src_img = src/imgs.coffee
 : prg/sample.in |> !prg_cp |>
 : $(sol) |> !prg |> {sol}
 : $(sol) |> !prg_dbg |>
-
-: prg/archery.cpp |> !prg |>
 
 : prg/check.cpp |> !prg |>
 

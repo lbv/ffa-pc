@@ -7,28 +7,30 @@ data_in = build/prg/data.in
 data_out = build/prg/data.out
 out_pandoc_html = build/pandoc/html/%B.md
 out_pandoc_latex = build/pandoc/latex/%B.md
-pc_group = $(TUP_CWD)/utils/<pc>
+pc_doc = $(TUP_CWD)/utils/<pc_doc>
 tpl_htm = $(TUP_CWD)/utils/templates/tpl.htm
 tpl_tex = $(TUP_CWD)/utils/templates/tpl.tex
 tpl_css = $(TUP_CWD)/utils/templates/styles.css
 
+
+!coffeelib = |> ^ COFFEE %b^ coffee -c -o lib/ %f |> lib/%B.js
 
 !gen_in = |> ^ GEN in^ ./build/prg/%b > %o |> $(data_in)
 !gen_out = |> ^ GEN out^ ./build/prg/%b < $(data_in) > %o |> $(data_out)
 
 !html = | $(tpl_css) |> ^ PANDOC html^ pandoc -S -A $(tpl_css) --mathjax=XXX --template $(tpl_htm) -o %o %f |> build/html/%B.html
 
-!img_html = | $(src) $(pc_group) |> ^ COFFEE img:html^ coffee $(src) -i -f html |>
+!img_html = | $(src_img) $(pc_doc) |> ^ COFFEE img:html^ coffee $(src_img) -f html %b |>
 
-!img_latex = | $(src) $(pc_group) |> ^ COFFEE img:latex^ coffee $(src) -i -f latex |>
+!img_latex = | $(src_img) $(pc_doc) |> ^ COFFEE img:latex^ coffee $(src_img) -f latex %b |>
 
 !latex = |> ^ PANDOC latex^ pandoc -S --template $(tpl_tex) -o %o %f |> build/latex/%B.tex
 
-!pandoc_html = | $(pc_group) |> ^ COFFEE pandoc:html^ coffee %f -f html > %o |>
-!pandoc_latex = | $(pc_group) |> ^ COFFEE pandoc:latex^ coffee %f -f latex > %o |>
+!pandoc_html = | $(pc_doc) |> ^ COFFEE pandoc:html^ coffee $(src_doc) -f html > %o |> $(out_pandoc_html)
+!pandoc_latex = | $(pc_doc) |> ^ COFFEE pandoc:latex^ coffee $(src_doc) -f latex > %o |> $(out_pandoc_latex)
 
 !pdf = |> ^ PANDOC pdf^ pandoc -S --template $(tpl_tex) -o %o %f |> build/pdf/%B.pdf
 
-!prg_cp = |> ^ CP %f^ cp -f %f %o |> build/prg/%b
-!prg = |> ^ CC %f^ gcc $(CPPFLAGS) -o %o %f |> build/prg/%B
-!prg_dbg = |> ^ CC %f:dbg^ gcc $(CPPDBG) -o %o %f |> build/dbg/%B
+!prg_cp = |> ^ CP %b^ cp -f %f %o |> build/prg/%b
+!prg = |> ^ CC %b^ gcc $(CPPFLAGS) -o %o %f |> build/prg/%B
+!prg_dbg = |> ^ CC %b:dbg^ gcc $(CPPDBG) -o %o %f |> build/dbg/%B

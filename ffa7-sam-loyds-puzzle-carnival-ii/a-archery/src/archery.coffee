@@ -1,17 +1,11 @@
 doc = require 'phi.pc/doc'
 
 
-b = new doc.Builder __dirname
-
-
-b.addImages
-	'archery.png':
-		out: 'archery.jpg'
-		density: 190
+b = new doc.DocBuilder
 
 
 # |begin.markdown|
-b.set """
+b.build """
 % Problem A: The Archery Puzzle
 
 #{b.figureRight 'The young archer scored 100 points', 'archery.jpg', 0.4, 8}
@@ -20,7 +14,6 @@ Here is an odd little puzzle which occured the other day at an archery
 meeting. The young lady who carried off the first prize scored exactly one
 hundred points. Can you figure out how many arrows she used, as well as the
 points awarded to each arrow?
-
 
 - - -
 
@@ -77,5 +70,3 @@ Case 3: impossible
 '''}
 """
 # |end.markdown|
-
-b.run()

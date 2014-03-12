@@ -1,1 +1,6 @@
-: foreach src/*.coffee |> coffee -c -o lib/ %f |> lib/%B.js ../<pc>
+include_rules
+
+doc_src = src/doc.coffee src/exporters.coffee
+
+: foreach $(doc_src) |> !coffeelib |> | ../<pc_doc>
+: src/cake.coffee |> !coffeelib |>

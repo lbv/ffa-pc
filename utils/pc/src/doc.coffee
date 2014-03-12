@@ -16,10 +16,27 @@ nn
 	choices: [ 'html', 'latex' ]
 	required: true
 	help: 'Format to export to (html, latex).'
-.option 'images',
-	abbr: 'i'
-	flag: true
-	help: 'Process images.'
+
+
+class DocBuilder
+	constructor: ->
+		@opts = nn.parse()
+
+		@expt = switch @opts.format
+			when 'html' then new expts.Html
+			when 'latex' then new expts.Latex
+
+	build: (text) ->
+		puts text
+
+	constraints: (constr...) ->
+		@expt.constraints constr...
+
+	figureRight: (title, href, size, lines) ->
+		@expt.figureRight title, href, size, lines
+
+	samples: (input, output) ->
+		@expt.samples input, output
 
 
 imgDefaults =
@@ -29,15 +46,14 @@ imgDefaults =
 	jpegSize: '38kb'
 	htmlDim: '280x'
 
-
-class Builder
+class ImgBuilder
 	constructor: (dir) ->
-		@imgs = {}
-		@opts = nn.parse()
+		nn.option 'img',
+			position: 0
+			required: true
+			help: 'path to the image'
 
-		@expt = switch @opts.format
-			when 'html' then new expts.Html
-			when 'latex' then new expts.Latex
+		@opts = nn.parse()
 
 		buildImg = switch @opts.format
 			when 'html' then path.normalize "#{dir}/../build/html"
@@ -47,17 +63,12 @@ class Builder
 			buildImg: buildImg
 			img: path.normalize "#{dir}/../img"
 
-	addImages: (imgs) ->
+	build: (imgs) ->
 		for img, obj of imgs
 			imgs[img] = _.defaults obj, imgDefaults
 
-		@imgs = _.extend @imgs, imgs
+		@makeImage @opts.img, imgs[@opts.img] if imgs[@opts.img]?
 
-	constraints: (constr...) ->
-		@expt.constraints constr...
-
-	figureRight: (title, href, size, lines) ->
-		@expt.figureRight title, href, size, lines
 
 	makeImage: (src, img) ->
 		dirOut = @path.buildImg
@@ -94,19 +105,5 @@ class Builder
 		puts "Image for #{@opts.format}"
 		sh.exec "du -sh #{pathOut}"
 
-	makeImages: ->
-		@makeImage src, img for src, img of @imgs
 
-	samples: (input, output) ->
-		@expt.samples input, output
-
-	set: (@text) ->
-
-	run: ->
-		if @opts.images
-			@makeImages()
-			return
-
-		puts @text
-
-module.exports = { Builder }
+module.exports = { DocBuilder, ImgBuilder }
