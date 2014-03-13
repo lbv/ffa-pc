@@ -26,7 +26,7 @@ there is more than one valid path, choose the lexicographically lowest one.
 
 ## Input ##
 
-Input starts with a positive integer **T**, that denotes the number of test
+Input starts with a positive integer $T$, that denotes the number of test
 cases.
 
 There's a blank line at the start of each case. Then two integers are given

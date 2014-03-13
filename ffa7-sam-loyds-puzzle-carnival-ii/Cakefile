@@ -1,4 +1,3 @@
 ck = require 'phi.pc/cake'
 
-ck.optionDir()
-ck.taskSkel()
+ck.contest()

@@ -17,7 +17,7 @@ Foo
 
 ## Input ##
 
-Input starts with a positive integer **T**, that denotes the number of test
+Input starts with a positive integer $T$, that denotes the number of test
 cases.
 
 #{b.constraints 'T \\leq 100'}

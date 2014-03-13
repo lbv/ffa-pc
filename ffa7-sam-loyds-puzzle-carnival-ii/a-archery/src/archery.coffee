@@ -35,7 +35,7 @@ this reasoning for the rest of the arrows.
 
 ## Input ##
 
-Input starts with a positive integer **T**, that denotes the number of test
+Input starts with a positive integer $T$, that denotes the number of test
 cases.
 
 Each test case starts with two integers in a single line: $N$ and $S$. The

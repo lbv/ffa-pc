@@ -33,5 +33,5 @@ tpl_css = $(TUP_CWD)/utils/templates/styles.css
 !pdf = |> ^ PANDOC pdf^ pandoc -S --template $(tpl_tex) -o %o %f |> build/pdf/%B.pdf
 
 !prg_cp = |> ^ CP %b^ cp -f %f %o |> build/prg/%b
-!prg = |> ^ CC %b^ gcc $(CPPFLAGS) -o %o %f |> build/prg/%B
-!prg_dbg = |> ^ CC %b:dbg^ gcc $(CPPDBG) -o %o %f |> build/dbg/%B
+!prg = |> ^ CPP %b^ g++ $(CPPFLAGS) -o %o %f |> build/prg/%B
+!prg_dbg = |> ^ CPP %b:dbg^ g++ $(CPPDBG) -o %o %f |> build/dbg/%B

@@ -12,10 +12,9 @@ err = (msg) ->
 
 
 module.exports =
-	optionDir: ->
+	contest: ->
 		option '-d', '--dir [string]', 'Directory for the problem'
 
-	taskSkel: ->
 		task 'skel', 'Create new problem, copying skeleton files', (opt) ->
 			err 'Directory required' unless opt.dir?
 			err "#{opt.dir} already exists" if sh.test '-d', opt.dir
@@ -29,6 +28,7 @@ module.exports =
 			name = opt.dir.substr 2
 
 			sh.cp "#{DIR_SKEL}/Tupskel", "#{opt.dir}/Tupfile"
+			sh.cp "#{DIR_SKEL}/Cakefile", opt.dir
 
 			sh.mkdir '-p', dir_src
 			sh.cp "#{DIR_SKEL}/problem.coffee", "#{dir_src}/#{name}.coffee"
@@ -40,7 +40,7 @@ module.exports =
 			sh.cp '-r', "#{DIR_SKEL}/prg", opt.dir
 			sh.mv "#{dir_prg}/problem.cpp", "#{dir_prg}/#{name}.cpp"
 
-	taskSpell: (doc) ->
+	problem: (doc) ->
 		task 'spell', 'Check spelling of document', ->
 			console.log "Checking spell of #{doc}.."
 			path_dict = '../spell-dict'
