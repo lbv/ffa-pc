@@ -14,7 +14,7 @@ respective claims. It seems that they have obtained "patents" on some mining
 claims of the same size. Each claim was in the form of a right angled
 triangle, and all of exactly the same area, but of different dimensions, as
 would be the case with a triangle with a base of 35 feet, an elevation of 12
-and the hypothenuse of 37, as compared with another with dimensions of 20,
+and the hypotenuse of 37, as compared with another with dimensions of 20,
 21 and 29, as both contain areas of 210 feet.
 
 The puzzle calls for the complete list of different triangles with an area
