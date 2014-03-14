@@ -1,0 +1,3 @@
+ck = require 'phi.pc/cake'
+
+ck.problem 'jam'
