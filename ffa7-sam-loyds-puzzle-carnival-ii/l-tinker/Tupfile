@@ -1,0 +1,32 @@
+include_rules
+
+name = tinker
+
+img = img/$(name).png
+sol = prg/$(name).cpp
+
+src_doc = src/$(name).coffee
+src_img = src/imgs.coffee
+
+: $(src_doc) |> !pandoc_html |> {htm}
+: $(src_doc) |> !pandoc_latex |> {tex}
+
+: $(img) |> !img_latex |> build/img/latex/%B.jpg {img_tex}
+: $(img) |> !img_html |> build/html/%B.jpg
+
+: {htm} |> !html |>
+: {tex} |> !latex |>
+: {tex} |> !latex_embed |>
+
+: {tex} | {img_tex} |> !pdf |>
+
+: prg/sample.in |> !prg_cp |>
+: $(sol) |> !prg |> {sol}
+#: $(sol) |> !prg_dbg |>
+
+: prg/check.cpp |> !prg |>
+
+: prg/gen.cpp |> !prg |> {gen}
+
+: {gen} |> !gen_in |> {data_in}
+: {sol} | {data_in} |> !gen_out |>
