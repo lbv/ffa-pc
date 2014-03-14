@@ -1,10 +1,13 @@
 doc = require 'phi.pc/doc'
 
+name = ''
 
 b = new doc.ImgBuilder __dirname
 
-b.build
-	'.png':
-		out: '.jpg'
-		# density: 200
-		# htmlDim: '300x'
+imgObj = {}
+imgObj["#{name}.png"] =
+	out: "#{name}.jpg"
+	# density: 200
+	# htmlDim: '300x'
+
+b.build imgObj

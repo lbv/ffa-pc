@@ -22,7 +22,7 @@ src_img = src/imgs.coffee
 
 : prg/sample.in |> !prg_cp |>
 : $(sol) |> !prg |> {sol}
-: $(sol) |> !prg_dbg |>
+#: $(sol) |> !prg_dbg |>
 
 : prg/check.cpp |> !prg |>
 
