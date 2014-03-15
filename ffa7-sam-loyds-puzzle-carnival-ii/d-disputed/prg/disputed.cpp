@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <map>
 #include <set>
 using namespace std;
 
@@ -30,7 +31,7 @@ struct Triangle {
 };
 
 
-set<Triangle> tri[MAXA + 1];
+map<int, set<Triangle> > tri;
 int A;
 
 
@@ -40,6 +41,7 @@ T gcd(T a, T b) { for (T c = a%b; c != 0; a=b,b=c,c=a%b); return b; }
 
 void prepare()
 {
+	int tot = 0;
 	for (i64 m = 2; ; ++m) {
 		int cnt = 0;
 
@@ -56,11 +58,13 @@ void prepare()
 
 				tri[t.area()].insert(t);
 				++cnt;
+				++tot;
 			}
 		}
 
 		if (cnt == 0) break;
 	}
+	fprintf(stderr, "total: %d\n", tot);
 }
 
 void solve()

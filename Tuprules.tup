@@ -18,7 +18,7 @@ tpl_css = $(TUP_CWD)/utils/templates/styles.css
 !gen_in = |> ^ GEN in^ ./build/prg/%b > %o |> $(data_in)
 !gen_out = |> ^ GEN out^ ./build/prg/%b < $(data_in) > %o |> $(data_out)
 
-!html = | $(tpl_css) |> ^ PANDOC html^ pandoc -S -A $(tpl_css) --mathjax=XXX --template $(tpl_htm) -o %o %f |> build/html/%B.html
+!html = | $(tpl_css) |> ^ PANDOC html^ pandoc -S --ascii -A $(tpl_css) --mathjax=XXX --template $(tpl_htm) -o %o %f |> build/html/%B.html
 
 !img_html = | $(src_img) $(pc_doc) |> ^ COFFEE img:html^ coffee $(src_img) -f html %b |>
 

@@ -6,7 +6,7 @@
 using namespace std;
 
 
-#define MAXT 1000
+#define MAXT 5000
 #define MAXN 20
 
 #define Memset(m,v) memset(m, v, sizeof(m))

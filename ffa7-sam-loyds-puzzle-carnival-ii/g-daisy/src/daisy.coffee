@@ -49,7 +49,7 @@ of petals that have been plucked off, respectively.
 The next line contains $M$ distinct integers, representing the petals that
 have been plucked off. These numbers will always be in ascending order.
 
-#{b.constraints 'T \\leq 1000', '3 \\leq N \\leq 20', '1 \\leq M < N'}
+#{b.constraints 'T \\leq 5000', '3 \\leq N \\leq 20', '1 \\leq M < N'}
 
 ## Output ##
 

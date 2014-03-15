@@ -2,7 +2,7 @@
 #include <cstdio>
 
 
-#define MAXT 1000
+#define MAXT 5000
 #define MAXN 20
 
 
