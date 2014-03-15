@@ -15,6 +15,14 @@ class Html extends Exporter
 		</div>
 		"""
 
+	moreInfo: (url) ->
+		"""
+		<div class="ffa-more-info">
+		Side note: for more information about this contest, please visit
+		<a href="#{url}">this website</a>.
+		</div>
+		"""
+
 	samples: (input, output) ->
 		"""
 		<table class="table-io">
@@ -47,6 +55,8 @@ class Latex extends Exporter
 		  \\end{minipage}
 		\\end{wrapfigure}
 		"""
+
+	moreInfo: (url) -> ''
 
 	samples: (input, output) ->
 		"""

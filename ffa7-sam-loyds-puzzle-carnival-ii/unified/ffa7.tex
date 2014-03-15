@@ -1,0 +1,172 @@
+\documentclass[12pt]{article}
+
+
+%%
+%% Packages
+%%
+\usepackage{ctable}
+\usepackage{enumerate}
+\usepackage{etoolbox}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage[letterpaper,top=1cm,bottom=1.5cm,left=1.6cm,right=1.4cm]{geometry}
+\usepackage{graphicx}
+\usepackage{fixltx2e}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{fancyvrb}
+\usepackage{microtype}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+%%
+%% Fonts
+%%
+\usepackage{eulervm}
+\usepackage{libertine}
+\usepackage[defaultsans]{opensans}
+\usepackage[scaled=0.8]{DejaVuSansMono}
+
+%%
+%% Colors
+%%
+\definecolor{tango-orange-2}{RGB}{245,121,0}
+\definecolor{tango-skyblue-1}{RGB}{114,159,207}
+\definecolor{tango-skyblue-2}{RGB}{52,101,164}
+\definecolor{tango-skyblue-3}{RGB}{32,74,135}
+\definecolor{tango-plum-2}{RGB}{117,80,123}
+
+
+%%
+%% Titles and Styles
+%%
+\newcommand{\FFACommentary}[1]{%
+  \vspace{0.4em}\noindent\makebox[\linewidth][c]{%
+  \begin{minipage}{0.8\linewidth} \footnotesize #1 \end{minipage}}
+  \vspace{-0.2em}}
+\newcommand{\FFASpeak}[1]{{\small\slshape #1:\hspace{0.4em}}}
+\newcommand{\FFATitle}[1]{{%
+  \color{tango-skyblue-2}\sffamily\large\bfseries\hspace{-0.4em} #1}}
+
+\titleformat{\section}
+{\color{tango-skyblue-3}\sffamily\Large\bfseries\centering}
+{\color{red}\thesection}{0pt}{}
+\titlespacing{\section}{0pt}{1em}{0pt}
+
+\titleformat{\subsection}
+{\color{tango-skyblue-2}\sffamily\large\bfseries}
+{\color{red}\thesection}{0pt}{}
+\titlespacing{\subsection}{0pt}{1em}{0pt}
+
+% Remove the author and date fields and the space associated with them
+% from the definition of maketitle!
+\makeatletter
+\renewcommand{\@maketitle}{
+\newpage
+ \null
+ %\vskip 1em%
+ \vspace{-20pt}
+ \begin{center}%
+  {\color{tango-skyblue-3}\sffamily\Large\bfseries \@title}%
+ \end{center}%
+ \vspace{-2pt}
+} \makeatother
+
+
+%%
+%% Spacing
+%%
+\renewcommand*\arraystretch{1.5}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setcounter{secnumdepth}{0}
+
+
+%%
+%% Misc.
+%%
+\hypersetup{
+    colorlinks,
+    linktocpage,
+    citecolor=tango-orange-2,
+    filecolor=black,
+    linkcolor=tango-plum-2,
+    urlcolor=tango-skyblue-2
+}
+\graphicspath{{src/img/}}
+
+
+%%
+%% Document Body
+%%
+\title{
+Free for All 7\\
+Sam Loyd's Puzzle Carnival II
+}
+
+\date{2014-03-15}
+
+\begin{document}
+\maketitle
+
+\pagebreak
+\section{Problem A: The Archery Puzzle}
+\input{./src/latex/archery}
+
+\pagebreak
+\section{Problem B: In Puzzleland (III)}
+\input{./src/latex/puzzleland3}
+
+\pagebreak
+\section{Problem C: The Courier Problem}
+\input{./src/latex/courier}
+
+\pagebreak
+\section{Problem D: Disputed Claims}
+\input{./src/latex/disputed}
+
+\pagebreak
+\section{Problem E: Outwitting the Weighing Machine}
+\input{./src/latex/weighing}
+
+\pagebreak
+\section{Problem F: The Jolly Friar's Puzzle}
+\input{./src/latex/friar}
+
+\pagebreak
+\section{Problem G: A Daisy Puzzle Game}
+\input{./src/latex/daisy}
+
+\pagebreak
+\section{Problem H: Who Will Get the Nomination?}
+\input{./src/latex/nomination}
+
+\pagebreak
+\section{Problem I: In Puzzleland (IV)}
+\input{./src/latex/puzzleland4}
+
+\pagebreak
+\section{Problem J: Mother's Jam Puzzle}
+\input{./src/latex/jam}
+
+\pagebreak
+\section{Problem K: Skating Puzzle}
+\input{./src/latex/skating}
+
+\pagebreak
+\section{Problem L: The Tinker's Puzzle}
+\input{./src/latex/tinker}
+
+\pagebreak
+\section{Problem M: The Miser's Puzzle}
+\input{./src/latex/miser}
+
+\pagebreak
+\section{Problem N: The Pony Cart Problem}
+\input{./src/latex/pony}
+
+\end{document}

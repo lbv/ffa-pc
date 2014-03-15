@@ -35,6 +35,9 @@ class DocBuilder
 	figureRight: (title, href, size, lines) ->
 		@expt.figureRight title, href, size, lines
 
+	moreInfo: (url) ->
+		@expt.moreInfo url
+
 	samples: (input, output) ->
 		@expt.samples input, output
 

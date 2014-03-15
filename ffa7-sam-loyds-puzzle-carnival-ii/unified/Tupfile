@@ -1,0 +1,8 @@
+include_rules
+
+ARGS = -output-directory=build/pdf
+
+base = build/pdf/ffa7
+extras = $(base).aux $(base).log $(base).out
+
+: ffa7.tex | src/latex/* src/img/* |> pdflatex $(ARGS) %f && pdflatex $(ARGS) %f |> build/pdf/ffa7.pdf | $(extras)
