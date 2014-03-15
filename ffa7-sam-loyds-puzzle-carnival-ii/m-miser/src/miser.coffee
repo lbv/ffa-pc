@@ -18,14 +18,15 @@ groups, also alike (with the same number of coins of each type). Finally he
 repeated the process, this time splitting the gold into 6 alike groups.
 
 Assuming that each of the piles he made had a positive number of gold pieces
-of each type, what is the minimum amount of gold that the miser had?
+of each type, what is the minimum amount of gold that the miser could have
+had?
 
 - - -
 
 Let's say that the miser was able to divide his gold in $N$ different ways,
-and for each method of partitioning he was able to form $M_i$ groups (for $1
-\\leq i \\leq N$). You are asked now to determine the minimum amount of gold
-the miser had.
+and for each method of partitioning he was able to form $M_i$ similar groups
+(for $1 \\leq i \\leq N$). You are asked now to determine the minimum amount
+of gold he had.
 
 ## Input ##
 

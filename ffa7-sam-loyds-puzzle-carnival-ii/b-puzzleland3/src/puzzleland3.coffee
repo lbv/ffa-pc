@@ -17,8 +17,8 @@ once.
 - - -
 
 You receive an arbitrary, undirected graph, where each node is identified by
-a single uppercase letter. Two vertices are marked as endpoints; one is the
-*source*, or starting point, and the other is the *target*, or end point.
+a single uppercase letter. One vertex is the *source*, or starting point,
+and the other is the *target*, or end point.
 
 Your job is to imitate the cat's ability, and identify a path that goes from
 the source to the target, visiting each node in the graph exactly once.  If
@@ -29,11 +29,11 @@ there is more than one valid path, choose the lexicographically lowest one.
 Input starts with a positive integer $T$, that denotes the number of test
 cases.
 
-There's a blank line at the start of each case. Then two integers are given
-in a single line: $N$ and $M$, representing the number of nodes and the
-number of bi-directional edges in the graph, respectively.  You can assume
-that there is at most one edge between any pair of nodes, and that each edge
-will be reported only once.
+There's a blank line at the beginning of each case. Then two integers are
+given in a single line: $N$ and $M$, representing the number of nodes and
+the number of bi-directional edges in the graph, respectively.  You can
+assume that there is at most one edge between any pair of nodes, and that
+each edge will be reported only once.
 
 The next line will contain $N$ distinct letters, separated by spaces, which
 are the identifiers for all the nodes in the graph. The first letter in this

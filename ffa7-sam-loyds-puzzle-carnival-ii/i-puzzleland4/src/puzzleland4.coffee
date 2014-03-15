@@ -44,7 +44,8 @@ If this number is not an integer, and is less than $1$, then print it as a
 simplified fraction `p/q` (that is, $p$ and $q$ have to be coprimes).
 
 If the answer is not an integer, and is greater than $1$, then print it as a
-mixed number. See the samples below for more details.
+mixed number, with its fraction part simplified. See the samples below for
+the formatting details.
 
 #{b.samples '''
 3

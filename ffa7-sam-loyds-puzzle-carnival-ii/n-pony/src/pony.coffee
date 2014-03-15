@@ -23,9 +23,10 @@ circumference of the track described by the outer wheels in making the turn.
 - - -
 
 Assume that the tracks marked on the floor are perfectly circular, that the
-wheels on each side of the cart are separated by a distance of $D$ feet, and
-that for one turn of the inner wheels, the outer wheels make $N$ turns.
-Determine the circumference of the circle formed by the outer wheels.
+distance between a wheel on one side and its opposite on the other side is
+$D$ feet, and that for one turn of the inner wheels, the outer wheels make
+$N$ turns. Determine the circumference of the circle formed by the outer
+wheels.
 
 ## Input ##
 

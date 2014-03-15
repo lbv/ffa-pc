@@ -53,7 +53,7 @@ have been plucked off. These numbers will always be in ascending order.
 
 ## Output ##
 
-For each test case, print the case number, followed by string **yes** if
+For each test case, print the case number, followed by the string **yes** if
 Gretchen wins the game, or **no** otherwise.
 
 #{b.samples '''
