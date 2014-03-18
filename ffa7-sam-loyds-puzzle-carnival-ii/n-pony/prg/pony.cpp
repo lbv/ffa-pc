@@ -2,7 +2,7 @@
 #include <cstdio>
 
 
-const double pi_4 = acos(-1.0) * 4.0;
+const double pi_2 = acos(-1.0) * 2.0;
 
 
 double D, N;
@@ -11,7 +11,7 @@ double D, N;
 
 double solve()
 {
-	return pi_4 * D / (N-1);
+	return pi_2 * D * N / (N-1);
 }
 
 int main()
