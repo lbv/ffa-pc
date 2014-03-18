@@ -15,6 +15,8 @@ tpl_css = $(TUP_CWD)/utils/templates/styles.css
 
 !coffeelib = |> ^ COFFEE %b^ coffee -c -o lib/ %f |> lib/%B.js
 
+!editorial = |> ^ PANDOC %B^ pandoc -S -o %o %f |> build/html/%B.html
+
 !gen_in = |> ^ GEN in^ ./build/prg/%b > %o |> $(data_in)
 !gen_out = |> ^ GEN out^ ./build/prg/%b < $(data_in) > %o |> $(data_out)
 
